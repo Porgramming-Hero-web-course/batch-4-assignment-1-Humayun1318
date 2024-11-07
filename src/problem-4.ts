@@ -27,20 +27,20 @@
   }
 
   // Sample Input 1:
-  const circleArea = calculateShapeArea({ shape: "circle", radius: 5 });
-console.log(circleArea);
-  // Sample Output 1:
-  78.54;
+//   const circleArea = calculateShapeArea({ shape: "circle", radius: 5 });
+// console.log(circleArea);
+//   // Sample Output 1:
+//   78.54;
 
-  // Sample Input 2:
-  const rectangleArea = calculateShapeArea({
-    shape: "rectangle",
-    width: 4,
-    height: 6,
-  });
-console.log(rectangleArea);
-  // Sample Output 2:
-  24;
+//   // Sample Input 2:
+//   const rectangleArea = calculateShapeArea({
+//     shape: "rectangle",
+//     width: 4,
+//     height: 6,
+//   });
+// console.log(rectangleArea);
+//   // Sample Output 2:
+//   24;
 
   //
 }
