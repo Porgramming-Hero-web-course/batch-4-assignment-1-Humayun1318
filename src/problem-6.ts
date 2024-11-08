@@ -8,12 +8,12 @@
     age: number,
     email: string,
   }
-  
+
   type UpdateProfile = {
     [Key in keyof Profile]?: Profile[Key] | undefined;
   }
-  const updateProfile = (obj1: Profile, obj2Partial: UpdateProfile) : Profile => {
-    return {...obj1, ...obj2Partial};
+  const updateProfile = (obj1: Profile, obj2Partial: UpdateProfile): Profile => {
+    return { ...obj1, ...obj2Partial };
   }
 
   // Sample Input :

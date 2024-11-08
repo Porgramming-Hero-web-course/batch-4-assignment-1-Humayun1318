@@ -4,7 +4,7 @@
 
   //Hints: Use keyof
 
-const getProperty = <T, Q extends keyof T>(obj: T, key: Q): T[Q]=> {
+  const getProperty = <T, Q extends keyof T>(obj: T, key: Q): T[Q] => {
     return obj[key];
   }
 
@@ -14,7 +14,7 @@ const getProperty = <T, Q extends keyof T>(obj: T, key: Q): T[Q]=> {
   // console.log(getProperty(person, "name"));
 
   // Sample Output:
-  //Alice;
+  // Alice;
 
 
   //
