@@ -5,7 +5,7 @@ Typescript has become a most popular run time environment in development. It giv
 
 
 ## What Are Union Types?
-Union Types allows us to hold multiple Types in a varibale. With that it give us the flexibility to work with the different types using a single varibale or parameter.
+Union Types allows us to hold multiple Types in a variable. With that it give us the flexibility to work with the different types using a single variable or parameter.
 
 For the Union, uses the (|) operator.
 
@@ -21,7 +21,7 @@ exVar = 42;       // valid
 exVar = true;     // valid
 exVar = [];       // invalid, it can be an error
 ```
-In this Examples: typesOfUnion holds the three variable types and it can be either string, number, and boolean. So if you want you can store this three types of varibale using typesOfUnion. Also there is a possible to store the custom type using Union.
+In this Examples: typesOfUnion holds the three variable types and it can be either string, number, and boolean. So if you want you can store this three types of variable using typesOfUnion. Also there is a possible to store the custom type using Union.
 
 ## Examples With Types Alias:
 Using type Alias, we can use like this
@@ -34,17 +34,17 @@ type customVariable = CustomVariable1 | CustomVariable2;
 
 const ex1: CustomVariable = { presentAddress: "Chattagram" }; // valid
 const ex2: CustomVariable = { permanentAddress: "Lohagra" }; // valid
-const ex3: CustomVariable = { presentAddress: "USA", permanentAddress: "Bangladesh" }; // invalid - TypeScript expects one or the other, not both
+const ex3: CustomVariable = { presentAddress: "USA", permanentAddress: "Bangladesh" }; // invalid - TypeScript expects one or the other, not both.
 
 ```
 
-So, as we can see in the customVariable hold a another two custom type of Alias.
+So, as we can see in the customVariable hold a another two custom type of Alias (CustomVariable1) and (CustomVariable2). If you want it can be either use customVariable1 or CustomVariable2 using the CustomVariable.
 
 
 ## Benefits of Union Types:
 
-- Minimizing error with ensure the predifined Types are assigned
-- Union can help to accept the unwanted values
+- Minimizing error with ensure the predefined Types are assigned.
+- Union can help to accept the unwanted values.
 
 
 ## Use Case
@@ -75,13 +75,15 @@ interface Age = {age: number};
 type Person = Name & Age;
 
 let person : Person = {name: 'Rasel', age: 35} // valid
-let person : Person = {name: 'Rasel', age: 35, add: 'ctg'} // Invalid Cz, (add: 'ctg') proerty  will not accept the Person type.
+let person : Person = {name: 'Rasel', age: 35, add: 'ctg'} // Invalid Because, (add: 'ctg') property haven't present in Person type.
 ```
-Here, Person holds the properties from both the interface type Name and Age. And it will must have the properties name and age otherwise it will prevent another perperty entries in the Person type.
+Here, Person holds the properties from both the interface type Name and Age. And it will must have the properties name and age also otherwise it will through an error if any properties are absent.It will also prevent the another property entry in the Person type.
+
 ## Benefits of Intersection Types:
 
 - Ensure all the intersection property must be included.
-- To help the complex type defination without redundancy.
+- To help the complex type definition without redundancy.
+
 ## Use Case
 
 ```typescript
@@ -93,7 +95,7 @@ function getUserDetails( users: Name & Age) : string{
 }
 ```
 
-So in this function (getUserDetails), requires the properties from both Name and Age. And ensure that it will not accept the other properties exept name and age. Must sure to have this properties, also ensure the missing if will not provide the name and age.
+So in this function (getUserDetails), requires the properties from both Name and Age. And ensure that it will not accept the other properties except name and age. Must sure to have this properties, also ensure the missing if will not provide the name and age.
 
 
 ## Comparing Union and Intersection Types:
